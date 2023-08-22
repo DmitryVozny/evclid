@@ -5,6 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evklid</title>
+
+  <!-- FONTS-->
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Black.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+
+  <!-- CSS-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/accordion.min.css">
@@ -12,7 +21,7 @@
   <link rel="stylesheet" href="css/media.css">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
-  <title>Evklid</title>
+
 </head>
 
 <body>
@@ -25,7 +34,7 @@
           <span class="burger__line"></span>
         </button>
         <a class="header__logo" href="#">
-          <img class="header__logo" src="img/Logo.png" alt="Logo">
+          <img class="header__logo" src="img/Logo.svg" alt="Logo">
         </a>
         <div class="header__nav-elements">
           <nav class="header__nav">
@@ -98,9 +107,26 @@
         <div class="hero__content">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide slide1"></div>
-              <div class="swiper-slide slide2"></div>
-              <div class="swiper-slide slide3"></div>
+
+              <div class="swiper-slide">
+                <picture>
+                  <source data-srcset="img/hero-bcg1.webp" type="image/webp" />
+                  <img class="lazyload swiper-image" data-src="img/hero-bcg1.jpg" alt="">
+                </picture>
+              </div>
+
+              <div class="swiper-slide">
+                <picture>
+                  <source data-srcset="img/hero-bcg2.webp" type="image/webp" />
+                  <img class="lazyload swiper-image" data-src="img/hero-bcg2.jpg" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source data-srcset="img/hero-bcg3.webp" type="image/webp" />
+                  <img class="lazyload swiper-image" data-src="img/hero-bcg3.jpg" alt="">
+                </picture>
+              </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -226,7 +252,11 @@
                     конкретные выводы, разумеется, призваны к&nbsp;ответу.
                   </p>
                 </div>
-                <div class="how__cards-right-card1">
+                <div class="how__cards-right-card">
+                  <picture>
+                    <source data-srcset="img/how1.webp" type="image/webp" />
+                    <img class="lazyload  how__card-image" data-src="img/how1.jpg" alt="">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -250,7 +280,11 @@
                     подвергнуты целой серии независимых исследований.
                   </p>
                 </div>
-                <div class="how__cards-right-card2">
+                <div class="how__cards-right-card">
+                  <picture>
+                    <source data-srcset="img/how2.webp" type="image/webp" />
+                    <img class="lazyload how__card-image" data-src="img/how2.jpg" alt="">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -272,7 +306,11 @@
                     по&nbsp;разработке прогресса профессионального сообщества.
                   </p>
                 </div>
-                <div class="how__cards-right-card3">
+                <div class="how__cards-right-card">
+                  <picture>
+                    <source data-srcset="img/how3.webp" type="image/webp" />
+                    <img class="lazyload how__card-image" data-src="img/how3.jpg" alt="">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -292,7 +330,11 @@
                     постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
                   </p>
                 </div>
-                <div class="how__cards-right-card4">
+                <div class="how__cards-right-card">
+                  <picture>
+                    <source data-srcset="img/how4.webp" type="image/webp" />
+                    <img class="lazyload how__card-image" data-src="img/how4.jpg" alt="">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -428,7 +470,7 @@
     <div class="container footer__content">
       <div class="footer__left">
         <a class="footer__logo-link" href="#">
-          <img class="footer__logo" src="img/Logo-footer.png" alt="Logo">
+          <img class="footer__logo" src="img/Logo-footer.svg" alt="Logo">
         </a>
         <nav class="footer__nav">
           <ul class="footer__list list-reset">
@@ -516,11 +558,16 @@
       </div>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/swiper.js"></script>
-  <script src="js/accordion.min.js"></script>
-  <script src="js/index.js"></script>
+
+  <script defer src="js/scripts.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="js/swiper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script defer src="js/accordion.min.js"></script>
+  <script defer src="js/index.js"></script>
+  <script defer>
+    lazyload();
+  </script>
 </body>
 
 </html>
